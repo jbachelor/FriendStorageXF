@@ -25,7 +25,8 @@ namespace FriendStorageXF2.DataAccess
 
 		public IEnumerable<Friend> GetAllFriends()
 		{
-			throw new NotImplementedException();
+			Debug.WriteLine($"{nameof(FriendDataService)}.GetAllFriends");
+			return null;
 		}
 
 		public Friend GetFriendById(int friendId)
