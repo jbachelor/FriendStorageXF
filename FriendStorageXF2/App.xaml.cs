@@ -1,5 +1,8 @@
 ﻿using Prism.Unity;
+using Microsoft.Practices.Unity;
 using FriendStorageXF2.Views;
+using System;
+using FriendStorageXF2.DataAccess;
 
 namespace FriendStorageXF2
 {
@@ -18,6 +21,8 @@ namespace FriendStorageXF2
 			Container.RegisterTypeForNavigation<MainNavigationPage>();
 			Container.RegisterTypeForNavigation<MainPage>();
 			Container.RegisterTypeForNavigation<FriendEditPage>();
+
+			Container.RegisterType<IDataService, FriendDataService>();
 		}
 	}
 }

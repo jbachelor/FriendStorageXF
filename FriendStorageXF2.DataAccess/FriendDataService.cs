@@ -6,9 +6,9 @@ using FriendStorageXF2.Model;
 
 namespace FriendStorageXF2.DataAccess
 {
-	public class FileDataService : IDataService
+	public class FriendDataService : IDataService
 	{
-		public FileDataService()
+		public FriendDataService()
 		{
 		}
 
