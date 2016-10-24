@@ -1,0 +1,3 @@
+﻿This folder is for styles: "ResourceDictionary" in the wpf world... Are these the same in Xamarin.Forms?
+Assuming so, a variety of ResourceDictionary xaml files can be held in this styles folder,
+and then they must be referenced in App.Xaml.
