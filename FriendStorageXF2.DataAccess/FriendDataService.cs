@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 using FriendStorageXF2.Model;
+using System.Diagnostics;
 
 namespace FriendStorageXF2.DataAccess
 {
@@ -38,7 +39,7 @@ namespace FriendStorageXF2.DataAccess
 			throw new NotImplementedException();
 		}
 
-		private List<Friend> ReadFromFile()
+		private IEnumerable<Friend> ReadFromFile()
 		{
 			return new List<Friend>
 				{

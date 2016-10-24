@@ -18,10 +18,19 @@ namespace FriendStorageXF2
 
 		protected override void RegisterTypes()
 		{
+			RegisterNavigation();
+			RegisterServices();
+		}
+
+		void RegisterNavigation()
+		{
 			Container.RegisterTypeForNavigation<MainNavigationPage>();
 			Container.RegisterTypeForNavigation<MainPage>();
 			Container.RegisterTypeForNavigation<FriendEditPage>();
+		}
 
+		void RegisterServices()
+		{
 			Container.RegisterType<IDataService, FriendDataService>();
 		}
 	}
