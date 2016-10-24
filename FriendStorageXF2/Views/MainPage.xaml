@@ -6,6 +6,17 @@
 	prism:ViewModelLocator.AutowireViewModel="True"
 	x:Class="FriendStorageXF2.Views.MainPage"
 	Title="Carbonite">
-	<ListView>
+	<ListView
+		x:Name="FriendsListView"
+		AutomationId="FriendsListView"
+		ItemsSource="{Binding Friends}"
+		SelectedItem="{Binding SelectedFriend}">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<TextCell
+					Text="{Binding DisplayName}" 
+					Detail="{Binding DisplayBirthday}" />
+			</DataTemplate>
+		</ListView.ItemTemplate>
 	</ListView>
 </ContentPage>

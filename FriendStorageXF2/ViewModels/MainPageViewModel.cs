@@ -37,6 +37,13 @@ namespace FriendStorageXF2.ViewModels
 			set { SetProperty(ref _friends, value); }
 		}
 
+		Friend _selectedFriend = null;
+		public Friend SelectedFriend
+		{
+			get { return _selectedFriend; }
+			set { SetProperty(ref _selectedFriend, value); }
+		}
+
 		#endregion Properties
 
 		#region INavigationAware
@@ -56,7 +63,8 @@ namespace FriendStorageXF2.ViewModels
 		void ReloadFriends()
 		{
 			Debug.WriteLine($"{nameof(MainPageViewModel)}.ReloadFriends");
-			Friends = _dataService.GetAllFriends() as ObservableCollection<Friend>;
+			var returnedFriends = _dataService.GetAllFriends();
+			Friends = new ObservableCollection<Friend>(returnedFriends);
 		}
 	}
 }

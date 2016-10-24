@@ -26,12 +26,13 @@ namespace FriendStorageXF2.DataAccess
 		public IEnumerable<Friend> GetAllFriends()
 		{
 			Debug.WriteLine($"{nameof(FriendDataService)}.GetAllFriends");
-			return null;
+			var friends = GetCannedData();
+			return friends;
 		}
 
 		public Friend GetFriendById(int friendId)
 		{
-			var friends = ReadFromFile();
+			var friends = GetCannedData();
 			return friends.Single(f => f.Id == friendId);
 		}
 
@@ -40,7 +41,7 @@ namespace FriendStorageXF2.DataAccess
 			throw new NotImplementedException();
 		}
 
-		private IEnumerable<Friend> ReadFromFile()
+		private IEnumerable<Friend> GetCannedData()
 		{
 			return new List<Friend>
 				{
@@ -52,7 +53,7 @@ namespace FriendStorageXF2.DataAccess
 						Birthday = new DateTime(1979,02,02)},
 					new Friend{Id=4,FirstName="Emma",LastName="Smelt",
 						Birthday = new DateTime(2002,10,10)},
-					new Friend{Id=5,FirstName = "Bella",LastName="Welsch",
+					new Friend{Id=5,FirstName = "Bella",LastName="Squidlover",
 						Birthday = new DateTime(2007,03,03), IsDeveloper = true},
 					new Friend{Id=6,FirstName="Urs",LastName="Meier",
 						Birthday = new DateTime(1970,03,5), IsDeveloper = true},
