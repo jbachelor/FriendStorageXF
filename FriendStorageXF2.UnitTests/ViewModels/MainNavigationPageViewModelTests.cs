@@ -1,10 +1,19 @@
 ﻿using System;
+using NUnit.Framework;
+
 namespace FriendStorageXF2.UnitTests.ViewModels
 {
+	[TestFixture]
 	public class MainNavigationPageViewModelTests
 	{
-		public MainNavigationPageViewModelTests()
+		[Test]
+		public void TestStuff()
 		{
+			// Arrange:       
+
+			// Act: 
+
+			// Assert: 
 		}
 	}
 }

@@ -10,12 +10,12 @@ namespace FriendStorageXF2
 		protected override void OnInitialized()
 		{
 			InitializeComponent();
-
-			NavigationService.NavigateAsync("MainPage?title=Hello%20from%20Xamarin.Forms");
+			NavigationService.NavigateAsync("MainNavigationPage");
 		}
 
 		protected override void RegisterTypes()
 		{
+			Container.RegisterTypeForNavigation<MainNavigationPage>();
 			Container.RegisterTypeForNavigation<MainPage>();
 			Container.RegisterTypeForNavigation<FriendEditPage>();
 		}
